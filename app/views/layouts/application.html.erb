@@ -3,7 +3,8 @@
   <head>
     <title>Thefirstrails</title>
     <% if user_signed_in? %>
-       <p> Hello, <%=  current_user . email  %> </p>
+       <!--<p> Hello, <%=  current_user . email  %> </p>-->
+       <p> Hello, <%=  link_to current_user . email , users_show_path %></p>
        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
      <% end %>
     <hr>
